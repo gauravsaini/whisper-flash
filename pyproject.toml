@@ -1,0 +1,38 @@
+[project]
+name = "whisper-flash"
+version = "0.1.0"
+description = "DFlash speculative decoding for Whisper-large-v3"
+requires-python = ">=3.10"
+dependencies = [
+    "torch",
+    "transformers>=4.40",
+    "datasets",
+    "librosa",
+    "soundfile",
+    "jiwer",
+    "tqdm",
+    "numpy",
+    "torchcodec",
+]
+
+[project.optional-dependencies]
+mlx = [
+    "mlx>=0.16",
+    "mlx-whisper",
+    "datasets",
+    "jiwer",
+    "tqdm",
+    "numpy",
+]
+
+[tool.setuptools.packages.find]
+include = ["whisper_flash*", "whisper_flash_mlx*"]
+
+[project.scripts]
+whisper-flash = "whisper_flash_mlx.__main__:main"
+whisper-flash-dataset = "whisper_flash.generate_dataset:main"
+whisper-flash-train = "whisper_flash.train:main"
+whisper-flash-eval = "whisper_flash.evaluate:main"
+whisper-flash-mlx-dataset = "whisper_flash_mlx.generate_dataset:main"
+whisper-flash-mlx-train = "whisper_flash_mlx.train:main"
+whisper-flash-mlx-eval = "whisper_flash_mlx.evaluate:main"

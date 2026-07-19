@@ -1,0 +1,71 @@
+[
+  {
+    "name": "turbo-50x50",
+    "model": "openai/whisper-large-v3-turbo",
+    "train": 50,
+    "eval": 50,
+    "gates": "top1,adaptive",
+    "pca_rank": 128,
+    "d_draft": 512
+  },
+  {
+    "name": "turbo-50x100",
+    "model": "openai/whisper-large-v3-turbo",
+    "train": 50,
+    "eval": 100,
+    "gates": "top1,adaptive",
+    "pca_rank": 128,
+    "d_draft": 512
+  },
+  {
+    "name": "turbo-50x200",
+    "model": "openai/whisper-large-v3-turbo",
+    "train": 50,
+    "eval": 200,
+    "gates": "top1,adaptive",
+    "pca_rank": 128,
+    "d_draft": 512
+  },
+  {
+    "name": "turbo-cv-30x100",
+    "model": "openai/whisper-large-v3-turbo",
+    "train": 30,
+    "eval": 100,
+    "gates": "top1,adaptive",
+    "pca_rank": 128,
+    "d_draft": 512,
+    "dataset": "common_voice",
+    "dataset_config": "en",
+    "dataset_split": "test"
+  },
+  {
+    "name": "turbo-fleurs-30x100",
+    "model": "openai/whisper-large-v3-turbo",
+    "train": 30,
+    "eval": 100,
+    "gates": "top1,adaptive",
+    "pca_rank": 128,
+    "d_draft": 512,
+    "dataset": "google/fleurs",
+    "dataset_config": "en_us",
+    "dataset_split": "test"
+  },
+  {
+    "name": "tiny-50x100",
+    "model": "openai/whisper-tiny",
+    "train": 50,
+    "eval": 100,
+    "gates": "top1,adaptive",
+    "pca_rank": 64,
+    "d_draft": 256
+  },
+  {
+    "name": "small-30x50",
+    "model": "openai/whisper-small",
+    "train": 30,
+    "eval": 50,
+    "gates": "top1,adaptive",
+    "pca_rank": 64,
+    "d_draft": 256
+  }
+]

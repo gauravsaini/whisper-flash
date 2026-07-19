@@ -1,0 +1,63 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+archive/
+research_moe/
+docs/
+
+# Build artifacts
+*.egg-info/
+
+# Data and Checkpoints
+data/
+checkpoints*/
+*.safetensors
+*.npz
+*.wav
+
+# MacOS
+.DS_Store
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# MLX cache & config
+.mlx_cache/
+.opencode/
+skills/
+
+# Build artifacts
+paper.pdf
+*.log
+
+# Personal test files
+record.m4a
+
+# Old backups
+archive/whisper-flash.zip
+
+# Dynamic eval outputs (regenerated per run)
+results/
+
+# Jupyter notebooks (binary JSON, hard to diff)
+*.ipynb
+
+# Audio files (too large for git)
+experiments/p15_audio/*.wav
